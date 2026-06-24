@@ -104,7 +104,7 @@ img {
 .grid-container .grid-item {
     margin: 0 10px 20px;
     width: 100%;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     display: flex;
 }
@@ -167,11 +167,81 @@ img {
     transform-origin: bottom left;
 }
 
+/* ------------------------------------- */
+/*          Hero-Section Start           */
+/* ------------------------------------- */
+
+.hero-inner {
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.hero-content,
+.hero-visual {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.hero-description {
+    width: 100%;
+    padding: 20px 0 10px 0;
+}
+
+.hero-visual {
+    align-items: center !important;
+}
+
+.hero-bottom-description {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.visual-status {
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+    border: 1px var(--text-gray) solid;
+    padding: 3px 30px;
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-primary-color);
+}
+
+.visual-status::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 8px;
+    transform: translateY(-50%);
+    background-color: #C778DD;
+}
+
+
+
 /*------------------------------*/
 /*         RESPONSIVE           */
 /*------------------------------*/
 
 @media (min-width:768px) {
+
+
+    /* grid layouts */
+    .grid-container.grid-2 .grid-item {
+        width: calc(var(--grid-width-2) - 20px);
+    }
+
+    .grid-container.grid-3 .grid-item {
+        width: calc(var(--grid-width-3) - 20px);
+    }
+
+    .grid-container.grid-4 .grid-item {
+        width: calc(var(--grid-width-3) - 20px);
+    }
+
     .logo-block img {
         width: 35px;
     }
@@ -193,9 +263,31 @@ img {
     .nav-link {
         font-size: 16px;
     }
+
+    /* ------------------------------------- */
+    /*          Hero-Section Start           */
+    /* ------------------------------------- */
+    .hero-title {
+        font-size: 25px;
+        font-weight: 300;
+        line-height: 30px;
+    }
+
+    .hero-description p {
+        letter-spacing: 0.5px;
+        word-spacing: 1px;
+    }
+
+
 }
 
 @media (min-width:992px) {
+
+    /* grid layouts */
+    .grid-container.grid-4 .grid-item {
+        width: calc(var(--grid-width-3) - 20px);
+    }
+
     .logo-block img {
         width: 40px;
     }
@@ -207,9 +299,18 @@ img {
     .nav-link {
         font-size: 17px;
     }
+
+
+
 }
 
 @media (min-width:1199px) {
+
+    /* grid layouts */
+    .grid-container.grid-4 .grid-item {
+        width: calc(var(--grid-width-4) - 20px);
+    }
+
     .logo-block img {
         width: 45px;
     }
@@ -221,6 +322,28 @@ img {
     .nav-link {
         font-size: 19px;
     }
+
+    /* ------------------------------------- */
+    /*          Hero-Section Start           */
+    /* ------------------------------------- */
+
+    .hero-title {
+        font-size: 44px;
+        font-weight: 300;
+        line-height: 55px;
+    }
+
+    .hero-description {
+        width: 80%;
+        padding: 20px 0 10px 0;
+    }
+
+    .hero-description p {
+        letter-spacing: 1px;
+        word-spacing: 2px;
+    }
+
+
 }
 
 @media (max-width: 1200px) {}
@@ -274,6 +397,56 @@ img {
     .navbar-toggle.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
+
+    /* ------------------------------------- */
+    /*          Hero-Section Start           */
+    /* ------------------------------------- */
+    .hero-inner {
+        padding: 50px 0;
+    }
+
+    .hero-title {
+        font-size: 30px;
+        font-weight: 300;
+        line-height: 35px;
+    }
+
+    .hero-description {
+        width: 80%;
+        padding: 20px 0 10px 0;
+    }
+
+    .hero-description p {
+        letter-spacing: 1px;
+        word-spacing: 2px;
+    }
+
+
 }
 
-@media (max-width: 400px) {}
+@media (max-width: 450px) {
+
+    /* ------------------------------------- */
+    /*          Hero-Section Start           */
+    /* ------------------------------------- */
+    .hero-title {
+        font-size: 23px;
+        font-weight: 400;
+        line-height: 30px;
+    }
+
+    .hero-description {
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .hero-description p {
+        font-size: 15px;
+    }
+
+    .hero-content .common-btn {
+        display: none;
+    }
+
+
+}
