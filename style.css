@@ -212,7 +212,7 @@ img {
 .visual-img::after {
     content: '';
     position: absolute;
-    background-image: url(dots.png);
+    background-image: url(dots.webp);
     background-repeat: no-repeat;
     background-size: 89px;
     width: 20%;
