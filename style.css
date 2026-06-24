@@ -192,6 +192,41 @@ img {
     align-items: center !important;
 }
 
+.visual-img {
+    position: relative;
+}
+
+.visual-img::before {
+    content: '';
+    position: absolute;
+    background-image: url(visual-effect-img.svg);
+    background-repeat: no-repeat;
+    background-size: 119px;
+    width: 33%;
+    height: 39%;
+    top: 27%;
+    left: 3%;
+    z-index: 1;
+}
+
+.visual-img::after {
+    content: '';
+    position: absolute;
+    background-image: url(dots.png);
+    background-repeat: no-repeat;
+    background-size: 89px;
+    width: 20%;
+    height: 24%;
+    bottom: 10%;
+    right: 8%;
+    z-index: 10;
+}
+
+.hero-image {
+    position: relative;
+    z-index: 9;
+}
+
 .hero-bottom-description {
     width: 100%;
     display: flex;
@@ -279,6 +314,7 @@ img {
     }
 
 
+
 }
 
 @media (min-width:992px) {
@@ -346,7 +382,15 @@ img {
 
 }
 
-@media (max-width: 1200px) {}
+@media (max-width: 1200px) {
+    .visual-img::before {
+        background-size: 98px;
+        width: 45%;
+        height: 55%;
+        top: 27%;
+        left: 3%;
+    }
+}
 
 @media (max-width: 767px) {
     .logo-block img {
@@ -421,6 +465,14 @@ img {
         word-spacing: 2px;
     }
 
+    .visual-img::before {
+        background-size: 100px;
+        width: 40%;
+        height: 50%;
+        top: 26%;
+        left: 8%;
+        z-index: 1;
+    }
 
 }
 
@@ -448,5 +500,12 @@ img {
         display: none;
     }
 
-
+    .visual-img::before {
+        background-size: 85px;
+        width: 40%;
+        height: 50%;
+        top: 29%;
+        left: 3%;
+        z-index: 1;
+    }
 }
