@@ -9,81 +9,114 @@
 
     <!-- CSS File Link -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
 
-    <!-- JS File Link -->
-    <script src="script.js" defer></script>
+
+
 </head>
 
 <body>
-
-    <!-- =============================
+    <div id="main" data-scroll-container>
+        <!-- =============================
             Header-Section Start
     ============================== -->
-    <header class="header-section">
-        <div class="container">
+        <header class="header-section">
+            <div class="container">
 
-            <div class="nav-main-block">
-                <a href="index.html" class="logo-block">
-                    <img src="logo.svg" alt="Logo">
-                    <h3 class="logo-name">JustCK</h3>
-                </a>
-                <div class="navbar-toggle">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
+                <div class="nav-main-block">
+                    <a href="index.html" class="logo-block">
+                        <img src="logo.svg" alt="Logo">
+                        <h3 class="logo-name">JustCK</h3>
+                    </a>
+                    <div class="navbar-toggle">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                    <nav class="sub-menu">
+                        <ul class="menu">
+                            <li class="nav-link"><a href="index.html"><span>#</span>home</a></li>
+                            <li class="nav-link"><a href="work.html"><span>#</span>work</a></li>
+                            <li class="nav-link"><a href="about-me.html"><span>#</span>about-me</a></li>
+                            <li class="nav-link"><a href="contacts.html"><span>#</span>contacts</a></li>
+                        </ul>
+                    </nav>
                 </div>
-                <nav class="sub-menu">
-                    <ul class="menu">
-                        <li class="nav-link"><a href="index.html"><span>#</span>home</a></li>
-                        <li class="nav-link"><a href="work.html"><span>#</span>work</a></li>
-                        <li class="nav-link"><a href="about-me.html"><span>#</span>about-me</a></li>
-                        <li class="nav-link"><a href="contacts.html"><span>#</span>contacts</a></li>
-                    </ul>
-                </nav>
-            </div>
 
-        </div>
-    </header>
-    <!-- =============================
+            </div>
+        </header>
+        <!-- =============================
             Header-Section End
     ============================== -->
 
-    <!-- =============================
+        <!-- =============================
             Hero-Section Start
     ============================== -->
-    <section class="hero-seaction">
-        <div class="container">
-            <div class="hero-inner grid-container grid-2 d-flex">
-                <div class="hero-content grid-item">
-                    <h1 class="hero-title">
-                        CK is a <span>web designer</span> and<br>
-                        <span>front-end developer</span>
-                    </h1>
-                    <div class="hero-description">
-                        <p class="description">
-                            He crafts responsive websites where technologies meet creativity
-                        </p>
-                    </div>
-                    <div class="common-btn">
-                        <a href="#" class="btn">Contact me !!</a>
-                    </div>
-                </div>
-                <div class="hero-visual grid-item">
+        <section class="hero-seaction">
+            <div class="container">
+                <div class="hero-inner grid-container grid-2 d-flex">
 
-                    <div class="visual-img">
-                        <img src="justck.webp" alt="CK" class="hero-image">
+                    <div class="social-icon d-flex">
+                        <ul>
+                            <li><a href="https://discord.gg/CPm5HmWuCC"><img src="discord.svg" alt="discord"></a></li>
+                            <li><a href="https://github.com/KaushalChavda"><img src="github.svg" alt="github"></a></li>
+                            <!-- <li><a href="mailto:chavdakaushal57@gmail.com?subject=Website%20Inquiry&body=Hello,%20I%20want%20to%20know%20more..."><img src="email.svg" alt="email"></a></li> -->
+                        </ul>
                     </div>
 
-                    <div class="hero-bottom-description">
-                        <p class="visual-status description">Currently working on Portfolio</p>
+                    <div class="hero-content grid-item">
+                        <h1 class="hero-title">
+                            CK is a <span>web designer</span> and<br>
+                            <span>front-end developer</span>
+                        </h1>
+                        <div class="hero-description">
+                            <p class="description">
+                                He crafts responsive websites where technologies meet creativity
+                            </p>
+                        </div>
+                        <div class="common-btn">
+                            <a href="#" class="btn">Contact me !!</a>
+                        </div>
+                    </div>
+                    <div class="hero-visual grid-item">
+
+                        <div class="visual-img">
+                            <img src="justck.webp" alt="CK" class="hero-image">
+                        </div>
+
+                        <div class="hero-bottom-description">
+                            <p class="visual-status description">Currently working on Portfolio</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+        <!-- =============================
+            Hero-Section End
+    ============================== -->
 
 
+        <!-- =============================
+            Maintenance Start
+    ============================== -->
+        <section class="maintenance-container">
+            <div class="container">
+                <div class="maintenance-card">
+                    <div class="maintenance-icon">⚙️</div>
+                    <h3 class="maintenance-title">Under Maintenance</h3>
+                    <p class="maintenance-text">
+                        This page is temporarily unavailable as we are making some improvements to enhance your
+                        experience.
+                        We'll be right back shortly!
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <!-- JS File Link -->
+    <script src="script.js" defer></script>
 </body>
 
 </html>

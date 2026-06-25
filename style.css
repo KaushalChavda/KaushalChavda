@@ -31,6 +31,7 @@ body {
     font-family: "Noto Serif", serif;
     color: var(--text-primary);
     background-color: var(--bg-primary-color);
+    overflow-x: hidden;
 }
 
 a {
@@ -175,7 +176,10 @@ img {
     justify-content: space-between;
     align-items: center;
     padding: 40px 0;
+    position: relative;
 }
+
+
 
 .hero-content,
 .hero-visual {
@@ -256,6 +260,42 @@ img {
 }
 
 
+/*------------------------------*/
+/*      Maintenance CSS         */
+/*------------------------------*/
+.maintenance-card {
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.maintenance-icon {
+    display: inline-block;
+    font-size: 30px;
+    animation: spin 5s linear infinite;
+}
+
+.maintenance-title {
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.maintenance-text {
+    width: 65%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}   
 
 /*------------------------------*/
 /*         RESPONSIVE           */
@@ -362,6 +402,33 @@ img {
     /* ------------------------------------- */
     /*          Hero-Section Start           */
     /* ------------------------------------- */
+    .hero-inner::before {
+        content: '';
+        position: absolute;
+        background-color: #fff;
+        width: 1px;
+        height: 150px;
+        top: -15%;
+        left: -9%;
+    }
+
+    .hero-inner::after{
+        content: '';
+        position: absolute;
+        width: 100px;
+        height: 90px;
+        background-color: transparent;
+        border: 1px solid #fff;
+        right: -15%;
+        bottom: -5%;
+    }
+
+    .social-icon {
+        position: absolute;
+        top: 15%;
+        left: -12.2%;
+        width: 5%;
+    }
 
     .hero-title {
         font-size: 44px;
@@ -389,6 +456,10 @@ img {
         height: 55%;
         top: 27%;
         left: 3%;
+    }
+
+    .social-icon {
+        display: none;
     }
 }
 
@@ -474,6 +545,18 @@ img {
         z-index: 1;
     }
 
+
+    /*------------------------------*/
+    /*      Maintenance CSS         */
+    /*------------------------------*/
+
+    .maintenance-title {
+        font-size: 30px;
+    }
+
+    .maintenance-text {
+        width: 100%;
+    }
 }
 
 @media (max-width: 450px) {
@@ -507,5 +590,23 @@ img {
         top: 29%;
         left: 3%;
         z-index: 1;
+    }
+
+
+    /*------------------------------*/
+    /*      Maintenance CSS         */
+    /*------------------------------*/
+
+    .maintenance-card {
+        padding: 20px 0;
+    }
+
+    .maintenance-title {
+        font-size: 20px;
+    }
+
+    .maintenance-text {
+        font-size: 15px;
+        padding: 10px 0;
     }
 }
